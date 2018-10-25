@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/stephen.yao/Develop/mobile-boot-camp/iOS/src/Module05/server/.build/checkouts/crypto.git--5641395985268820888/Sources/CCryptoOpenSSL/include"
+    export *
+}

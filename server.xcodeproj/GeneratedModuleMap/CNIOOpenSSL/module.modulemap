@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/stephen.yao/Develop/mobile-boot-camp/iOS/src/Module05/server/.build/checkouts/swift-nio-ssl.git--1594412761464975782/Sources/CNIOOpenSSL/include"
+    export *
+}

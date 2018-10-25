@@ -1,5 +1,10 @@
 import Vapor
 
+struct Listing: Content {
+    var title: String
+    var price: String
+}
+
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     // Basic "It works" example
@@ -11,9 +16,13 @@ public func routes(_ router: Router) throws {
     router.get("hello") { req in        
         return "Hello, world!"
     }
+    
+    router.get("listing") { req in
+        return Listing(title: "511 Church St", price: "$20")
+    }
 
     // Example of configuring a controller
-    let todoController = TodoController()
+    let todoController = TodoController()    
     router.get("todos", use: todoController.index)
     router.post("todos", use: todoController.create)
     router.delete("todos", Todo.parameter, use: todoController.delete)

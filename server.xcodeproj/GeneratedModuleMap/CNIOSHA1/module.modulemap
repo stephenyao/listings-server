@@ -1,4 +1,0 @@
-module CNIOSHA1 {
-    umbrella "/Users/stephen.yao/Develop/mobile-boot-camp/iOS/src/Module05/server/.build/checkouts/swift-nio.git-1666159301981980770/Sources/CNIOSHA1/include"
-    export *
-}

@@ -1,4 +1,0 @@
-module CNIOHTTPParser {
-    umbrella "/Users/stephen.yao/Develop/mobile-boot-camp/iOS/src/Module05/server/.build/checkouts/swift-nio.git-1666159301981980770/Sources/CNIOHTTPParser/include"
-    export *
-}

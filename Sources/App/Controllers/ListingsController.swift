@@ -8,7 +8,7 @@
 import Vapor
 
 final class ListingsController {
-    func index(_ req: Request) throws -> [Listing] {
-        return Listing.all()
+    func index(_ req: Request) throws -> ListingsResponse {
+        return ListingsResponse.default
     }
 }

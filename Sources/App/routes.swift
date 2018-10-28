@@ -1,10 +1,5 @@
 import Vapor
 
-struct Listing: Content {
-    var title: String
-    var price: String
-}
-
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     // Basic "It works" example

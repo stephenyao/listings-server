@@ -9,7 +9,21 @@ import Vapor
 
 final class ListingsController {
   func index(_ req: Request) throws -> [Listing] {
+    guard let queryString: String? = req.query["suburb"], queryString != nil else {
+      return Listing.all()
+    }
+
+    guard let suburb = Suburb(rawValue: queryString!) else {
+      return []
+    }
     
-    return Listing.all()
+    switch suburb {
+    case .richmond:
+      return Listing.richmond()
+    case .pointCook:
+      return Listing.pointCook()
+    case .glenWaverly:
+      return Listing.glenWaverly()
+    }
   }
 }

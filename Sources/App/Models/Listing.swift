@@ -7,34 +7,33 @@ enum Suburb: String {
 }
 
 struct Listing: Content {
+  let title: String
 
-	let title: String
-
-	let price: String
+  let price: String
 
   let agencyName: String
-  
+
   let imageURL: URL
-    
+
   static func all() -> [Listing] {
     let addresses = [richmondAddresses, pointCookAddresses, glenWaverlyAddresses].flatMap { $0 }
     let images = [richmondImages, pointCookImages, glenWaverlyImages].flatMap { $0 }
-    
+
     return Listing.compose(addresses: addresses, imagesURLs: images)
   }
-  
+
   static func richmond() -> [Listing] {
     return Listing.compose(addresses: richmondAddresses, imagesURLs: richmondImages)
   }
-  
+
   static func pointCook() -> [Listing] {
     return Listing.compose(addresses: pointCookAddresses, imagesURLs: pointCookImages)
   }
-  
+
   static func glenWaverly() -> [Listing] {
     return Listing.compose(addresses: glenWaverlyAddresses, imagesURLs: glenWaverlyImages)
   }
-  
+
   private static func compose(addresses: [String], imagesURLs: [URL]) -> [Listing] {
     return zip(addresses, imagesURLs)
       .map { Listing(title: $0, price: "$600k - 750k", agencyName: "Ray White", imageURL: $1) }

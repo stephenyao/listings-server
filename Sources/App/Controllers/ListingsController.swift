@@ -16,7 +16,7 @@ final class ListingsController {
     guard let suburb = Suburb(rawValue: queryString!) else {
       return []
     }
-    
+
     switch suburb {
     case .richmond:
       return Listing.richmond()

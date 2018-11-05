@@ -8,9 +8,7 @@
 import Vapor
 
 struct ListingsResponse: Content {
-  
   let listings: [Listing]
-  
+
   static let `default` = ListingsResponse(listings: Listing.all())
-  
 }
